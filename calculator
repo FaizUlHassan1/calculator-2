@@ -1,0 +1,159 @@
+using System;
+
+namespace overloading
+{
+    internal class Program
+    {
+
+        public static void Main(string[] args)
+        {
+            addition add=new addition();
+            subtraction sub=new subtraction();
+            Console.WriteLine("for addition press 1");
+            Console.WriteLine("For subb press 2");
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    Console.WriteLine("how many numbers you want add");
+                    int x = Convert.ToInt32(Console.ReadLine());
+                    if (x == 2)
+                    {
+                        Console.WriteLine("Enter first number");
+                        float a = Convert.ToSingle(Console.ReadLine());
+                        Console.WriteLine("enter second number");
+                        float b = Convert.ToSingle(Console.ReadLine());
+                        float sum = add.Add( a,b);
+
+                        Console.WriteLine(sum);
+
+                    }
+                    else if (x == 3)
+                    {
+                        Console.WriteLine("Enter first number");
+                        float a = Convert.ToSingle(Console.ReadLine());
+                        Console.WriteLine("enter second number");
+                        float b = Convert.ToSingle(Console.ReadLine());
+
+                        Console.WriteLine("enter third number");
+                        float c = Convert.ToSingle(Console.ReadLine());
+
+                        double sum = add.Add(4,5,6);
+                        Console.WriteLine("the number is" + sum);
+
+                    }
+
+                    else if (x == 4)
+                    {
+                        Console.WriteLine("Enter first number");
+                        float a = Convert.ToSingle(Console.ReadLine());
+                        Console.WriteLine("enter second number");
+                        float b = Convert.ToSingle(Console.ReadLine());
+
+                        Console.WriteLine("enter third number");
+                        float c = Convert.ToSingle(Console.ReadLine());
+
+                        Console.WriteLine("enter fourth number");
+                        float d = Convert.ToSingle(Console.ReadLine());
+
+                        double sum =add. Add(a, b, c, d);
+                        Console.WriteLine("the number is" + sum);
+                    }
+                    break;
+
+                case 2:
+                    Console.WriteLine("how many numbers you want substract");
+                    int y = Convert.ToInt32(Console.ReadLine());
+                    if (y == 2)
+                    {
+
+                        Console.WriteLine("Enter first number");
+                        float a = Convert.ToSingle(Console.ReadLine());
+                        Console.WriteLine("enter second number");
+                        float b = Convert.ToSingle(Console.ReadLine());
+
+
+                        float subtr = sub.Subb(a, b);
+                        Console.WriteLine("the number is" + subtr);
+                    }
+                    else if (y == 3)
+                    {
+
+                        Console.WriteLine("Enter first number");
+                        float a = Convert.ToSingle(Console.ReadLine());
+                        Console.WriteLine("enter second number");
+                        float b = Convert.ToSingle(Console.ReadLine());
+
+                        Console.WriteLine("enter third number");
+                        float c = Convert.ToSingle(Console.ReadLine());
+
+
+
+                        float subtr = sub.Subb(a, b, c);
+                        Console.WriteLine("the number is" + subtr);
+                    }
+
+                    else if (y == 4)
+                    {
+
+                        Console.WriteLine("Enter first number");
+                        float a = Convert.ToSingle(Console.ReadLine());
+                        Console.WriteLine("enter second number");
+                        float b = Convert.ToSingle(Console.ReadLine());
+
+                        Console.WriteLine("enter third number");
+                        float c = Convert.ToSingle(Console.ReadLine());
+
+                        Console.WriteLine("enter fourth number");
+                        float d = Convert.ToSingle(Console.ReadLine());
+
+
+                        float subtr = sub.Subb( a, b, c, d);
+                        Console.WriteLine("the number is" +subtr);
+                    }
+                    else
+                    {
+                        Console.WriteLine("you enter a wrong number");
+
+                    }
+                    break;
+            }
+        }
+    }
+    public class addition
+    {
+      public   float Add(float a, float b)
+        {
+            float c = a + b;
+            return c;
+        }
+       public  float Add(float a, float b, float d)
+        {
+            float c = a + b + d;
+            return c;
+        }
+        public float Add(float a, float b, float d, float e)
+        {
+            float c = a + b + d + e;
+            return c;
+        }
+    }
+    public class subtraction { 
+       public float Subb(float a, float b)
+        {
+            float c = a - b;
+            return c;
+        }
+        public float Subb(float a, float b, float d)
+        {
+            float c = a - b - d;
+            return c;
+        }
+        public  float Subb(float a, float b, float d, float e)
+        {
+            float c = a - b - d - e;
+            return c;
+        }
+    }
+}
